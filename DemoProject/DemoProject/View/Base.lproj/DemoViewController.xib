@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoViewController" customModule="DemoProject" customModuleProvider="target">
+            <connections>
+                <outlet property="btnClear" destination="6SY-fE-UCB" id="isc-dw-73x"/>
+                <outlet property="btnShare" destination="s6n-9c-Q98" id="9Db-fm-eVy"/>
+                <outlet property="btnUndo" destination="8Ar-sP-c5n" id="hHy-z2-1W6"/>
+                <outlet property="drawView" destination="0cE-Xh-6by" id="K8l-wC-nec"/>
+                <outlet property="vWidthStoke" destination="yAL-QI-T2O" id="rCI-K6-sFm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="Ic9-nd-hqb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cE-Xh-6by" customClass="DrawCanvasView" customModule="DemoProject" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cCV-vo-46I">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SY-fE-UCB">
+                            <rect key="frame" x="0.0" y="10" width="103.5" height="30"/>
+                            <state key="normal" title="Clear"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ar-sP-c5n">
+                            <rect key="frame" x="103.5" y="10" width="103.5" height="30"/>
+                            <state key="normal" title="Undo"/>
+                        </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" id="yAL-QI-T2O">
+                            <rect key="frame" x="205" y="10" width="107.5" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </slider>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6n-9c-Q98">
+                            <rect key="frame" x="310.5" y="10" width="103.5" height="30"/>
+                            <state key="normal" title="Share"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="faZ-Py-aLu"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0cE-Xh-6by" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Ai-4W-eEZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cCV-vo-46I" secondAttribute="trailing" id="JwO-l4-ECn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0cE-Xh-6by" secondAttribute="trailing" id="S16-vV-CXf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cCV-vo-46I" secondAttribute="bottom" id="Xe3-ey-e7R"/>
+                <constraint firstItem="cCV-vo-46I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZDU-yP-5PW"/>
+                <constraint firstItem="cCV-vo-46I" firstAttribute="top" secondItem="0cE-Xh-6by" secondAttribute="bottom" id="iMe-My-6ra"/>
+                <constraint firstItem="0cE-Xh-6by" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qU8-wF-Esx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="107.8125"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://bsvframeworks@bitbucket.org/bravesoftvietnam/cocoapods-specs.git'
+
+target 'DemoProject' do
+  use_modular_headers!
+  pod 'RoundedUI'
+  pod 'BSService'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  pod 'Toast'
+end
+  

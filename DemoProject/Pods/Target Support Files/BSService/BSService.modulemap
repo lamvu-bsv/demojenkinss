@@ -1,0 +1,6 @@
+module BSService {
+  umbrella header "BSService-umbrella.h"
+
+  export *
+  module * { export * }
+}
